@@ -1,0 +1,102 @@
+.lp_wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 80px auto;
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar content";
+}
+
+.lp_wrapper .nv_wrapper {
+  grid-area: navbar;
+  border: 4px solid cyan;
+}
+
+.lp_wrapper .nv_wrapper .navbar .navbar-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.lp_wrapper .sb_wrapper {
+  grid-area: sidebar;
+  border: 4px solid coral;
+}
+.lp_wrapper .co_wrapper {
+  grid-area: content;
+  border: 4px solid blueviolet;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .lp_wrapper {
+    background: red;
+    grid-template-areas:
+      "navbar navbar"
+      "content content";
+  }
+  .lp_wrapper .sb_wrapper {
+    display: none;
+  }
+  .lp_wrapper .nv_wrapper .navbar .navbar-icon {
+    display: block;
+    float: left;
+  }
+  .lp_wrapper .nv_wrapper .navbar .navbar-content {
+    display: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .lp_wrapper {
+    background: green;
+    grid-template-areas:
+      "navbar navbar"
+      "content content";
+  }
+  .lp_wrapper .sb_wrapper {
+    display: none;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .lp_wrapper {
+    background: blue;
+    grid-template-areas:
+      "navbar navbar"
+      "sidebar content";
+  }
+  .lp_wrapper .sb_wrapper {
+    display: block;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .lp_wrapper {
+    background: orange;
+    grid-template-areas:
+      "navbar navbar"
+      "sidebar content";
+  }
+  .lp_wrapper .sb_wrapper {
+    display: block;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .lp_wrapper {
+    background: pink;
+    grid-template-areas:
+      "navbar navbar"
+      "sidebar content";
+  }
+  .lp_wrapper .sb_wrapper {
+    display: block;
+  }
+}
